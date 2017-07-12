@@ -3,8 +3,8 @@
 a new granular synth built for the Push 2
 
 dependencies:
-- imp.push
-- lowkeyNW
+- imp.push external (get it from https://github.com/impsnldavid/imp.push)
+- lowkeyNW external (get it from the Max package manager)
 
 ![alt text][CycloneImage]
 
@@ -13,4 +13,6 @@ dependencies:
 ## Installation
 
 - git clone or download/unzip the folder and place it in `~/Documents/Max 7/Packages/`
-- open `patchers/cyclone-granny.maxpat`
+  * `cd ~/Documents/Max\ 7/Packages`
+  * `git clone https://github.com/philipkobernik/cyclone-granny.git`
+- open in max: `patchers/cyclone-granny.maxpat`
