@@ -5,11 +5,11 @@
 			"major" : 7,
 			"minor" : 1,
 			"revision" : 0,
-			"architecture" : "x86",
+			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 434.0, 78.0, 584.0, 787.0 ],
+		"rect" : [ 39.0, 78.0, 1351.0, 787.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -38,11 +38,37 @@
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-16",
+					"maxclass" : "newobj",
+					"numinlets" : 3,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 128.0, 593.0, 56.0, 22.0 ],
+					"style" : "",
+					"text" : "clip -1. 1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-4",
+					"maxclass" : "newobj",
+					"numinlets" : 0,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 164.0, 524.0, 96.0, 22.0 ],
+					"style" : "",
+					"text" : "r sampleSizeMs"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-27",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 475.0, 686.0, 37.0, 22.0 ],
+					"patching_rect" : [ 443.0, 686.0, 37.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"attr_comment" : ""
 					}
@@ -59,9 +85,9 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 520.72168, 686.0, 150.0, 33.0 ],
+					"patching_rect" : [ 488.72168, 686.0, 169.0, 47.0 ],
 					"style" : "",
-					"text" : "used to send messages out poly~\n"
+					"text" : "necessary for poly~ to output messages like the busy map\n"
 				}
 
 			}
@@ -123,9 +149,9 @@
 					"numinlets" : 6,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 127.0, 498.0, 129.0, 22.0 ],
+					"patching_rect" : [ 128.0, 560.0, 109.0, 22.0 ],
 					"style" : "",
-					"text" : "scale 1500 3500 -1. 1."
+					"text" : "scale 0 2830 -1. 1."
 				}
 
 			}
@@ -278,7 +304,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 13.0, 388.0, 97.0, 54.0 ],
+					"patching_rect" : [ 26.0, 433.0, 97.0, 54.0 ],
 					"style" : "",
 					"text" : "Sound buffer offset in ms"
 				}
@@ -318,10 +344,11 @@
 					"fontname" : "Arial",
 					"fontsize" : 13.0,
 					"id" : "obj-26",
+					"linecount" : 3,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 301.0, 271.0, 172.0, 25.0 ],
+					"patching_rect" : [ 356.0, 227.0, 86.0, 54.0 ],
 					"style" : "",
 					"text" : "Sample increment (pitch)"
 				}
@@ -351,7 +378,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 127.0, 404.0, 50.0, 22.0 ],
+					"patching_rect" : [ 127.0, 449.0, 50.0, 22.0 ],
 					"style" : ""
 				}
 
@@ -690,6 +717,17 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-53", 1 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-16", 0 ],
+					"watchpoint_flags" : 1,
+					"watchpoint_id" : 1
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 2 ],
 					"disabled" : 0,
 					"hidden" : 0,
@@ -708,7 +746,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-53", 1 ],
+					"destination" : [ "obj-16", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-36", 0 ]
@@ -721,6 +759,15 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-37", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-36", 2 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-4", 0 ]
 				}
 
 			}
