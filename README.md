@@ -4,6 +4,7 @@ a new granular synth built for the Push 2
 
 dependencies:
 - imp.push external (get it from https://github.com/impsnldavid/imp.push)
+- jit.mo external (get it from the Max package manager)
 - lowkeyNW external (get it from the Max package manager)
 
 ![alt text][CycloneImage]
